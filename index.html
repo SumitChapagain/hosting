@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/afcb9d937e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/my-logo.png" class="logo" alt="logo" >
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front End Developer</p>
+                <h1>Hi,I'm <span>Sumit</span> From Nepal</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img src="./images/user.png" alt="">
+                </div>
+                <div class="col-2">
+                    <h1>About Me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam incidunt reiciendis quisquam, id optio ea quidem nam architecto veritatis est explicabo. Illum amet alias commodi ab veritatis! Veritatis, aliquid iusto.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front End Dev</span><br>creative and amazing webpages.</li>
+                            <li><span>Front End Dev</span><br>creative and amazing webpages.</li>
+                            <li><span>Front End Dev</span><br>creative and amazing webpages.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-2024 in computer field</span><br>creative and amazing webpages.</li>
+                            <li><span>2021-2024 in computer field</span><br>creative and amazing webpages.</li>
+                            <li><span>2021-2024 in computer field</span><br>creative and amazing webpages.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>SEE Pass 😂</span><br>creative and amazing webpages.</li>
+                            <li><span>SEE Pass 😂</span><br>creative and amazing webpages.</li>
+                            <li><span>SEE Pass 😂</span><br>creative and amazing webpages.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>WEB Development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, nesciunt eos? Delectus ipsum quaerat consectetur eos omnis libero sunt doloribus, ipsam nobis nemo sit totam nulla dolor porro voluptas. Id.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-regular fa-image"></i>
+                    <h2>Photo Editing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, nesciunt eos? Delectus ipsum quaerat consectetur eos omnis libero sunt doloribus, ipsam nobis nemo sit totam nulla dolor porro voluptas. Id.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-pied-piper"></i>
+                    <h2>Logo Designing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, nesciunt eos? Delectus ipsum quaerat consectetur eos omnis libero sunt doloribus, ipsam nobis nemo sit totam nulla dolor porro voluptas. Id.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/index.html - Google Chrome 6_22_2024 10_57_08 AM.png" alt="">
+                    <div class="layer">
+                       <!-- <h3>Social Web</h3>
+                        <p>Lorem ips um dolor, sit amet consectetur adipisicing elit. Praesentium animi laboriosam est, temporibus minima cum voluptatem .</p> -->
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/ps.png" alt="">
+                    <div class="layer">
+                        <!-- <h3>Photo Editing</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium animi laboriosam est, temporibus minima cum voluptatem .</p> -->
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/logo.png" alt="">
+                    <div class="layer">
+                        <!-- <h3>Logo Designing</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium animi laboriosam est, temporibus minima cum voluptatem .</p> -->
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
