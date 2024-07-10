@@ -3,149 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Uday Sir</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: rgb(61, 155, 238); /* Original background color */
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: none;
-            justify-content: space-around;
-            width: 80%;
-            max-width: 1200px;
-        }
-        .left, .right {
-            width: 30%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-        .center {
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .cake img {
-            width: 400px;
-        }
-        .hbdy img {
-            width: 100%;
-            max-width: 200px;
-            animation: balloonAnimation 2s ease-in-out infinite alternate;
-        }
-        .balloon img {
-            width: 100px;
-            animation: balloonAnimation 1.5s ease-in-out infinite alternate;
-        }
-        @keyframes balloonAnimation {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.1); }
-        }
-        .popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: transparent;
-            font-size: 30px;
-            font-weight: bolder;
-            color: rgb(248, 13, 13);
-            padding: 40px; /* Increased padding for bigger size */
-            border-radius: 20px; /* Rounded corners */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Box shadow */
-            text-align: center;
-            display: none;
-            animation: popupAnimation 0.5s ease forwards; /* Animation */
-            opacity: 0; /* Initially hidden */
-            z-index: 1000; /* Higher z-index to ensure it's on top */
-        }
-        .popup.show {
-            display: block;
-        }
-        .hidden {
-            display: none;
-        }
-        .but button{
-            padding: 20px 30px;
-            border:none;
-            border-bottom-left-radius:20px;
-            border-top-right-radius: 20px;
-            font-size: 30px;
-            background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,183,0,1) 48%);
-            color:rgb(4, 4, 4);
-            stroke: black 2px;
-        }
-        @keyframes popupAnimation {
-            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.2); }
-            100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-        }
-    </style>
+    <title>Sumit</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/afcb9d937e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-<div class="but" id="blackScreen">
-    <button onclick="openGift()">Click to open your gift</button>
-</div>
-
-<div class="container" id="content">
-    <div class="left balloon">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-    </div>
-    <div class="center">
-        <div class="hbdy">
-            <img src="./images/bd.png" alt="">
-        </div>
-        <div class="cake">
-            <img src="./images/output-onlinegiftools.gif" alt="">
-        </div>
-        <div class="txt">
-            <h1>A gift from Sumit Chapagain</h1>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/my-logo.png" class="logo" alt="logo" >
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front End Developer</p>
+                <h1>Hi,I'm <span>Sumit</span> From Nepal</h1>
+            </div>
         </div>
     </div>
-    <div class="right balloon">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
-        <img src="./images/bal.png" alt="">
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img src="./images/user.png" alt="">
+                </div>
+                <div class="col-2">
+                    <h1>About Me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam incidunt reiciendis quisquam, id optio ea quidem nam architecto veritatis est explicabo. Illum amet alias commodi ab veritatis! Veritatis, aliquid iusto.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front End Dev</span><br>creative and amazing webpages.</li>
+                            <li><span>Front End Dev</span><br>creative and amazing webpages.</li>
+                            <li><span>Front End Dev</span><br>creative and amazing webpages.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-2024 in computer field</span><br>creative and amazing webpages.</li>
+                            <li><span>2021-2024 in computer field</span><br>creative and amazing webpages.</li>
+                            <li><span>2021-2024 in computer field</span><br>creative and amazing webpages.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>SEE Pass 😂</span><br>creative and amazing webpages.</li>
+                            <li><span>SEE Pass 😂</span><br>creative and amazing webpages.</li>
+                            <li><span>SEE Pass 😂</span><br>creative and amazing webpages.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="popup" id="popup">
-    <p style="font-weight: 400;"><strong>Happy Birthday Uday Sir 🎉</strong></p>
-</div>
-
-<audio id="bgAudio" class="hidden-audio">
-    <source src="./images/happy-birthday-jazz-171120.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-<script>
-    function openGift() {
-        document.getElementById('blackScreen').style.display = 'none'; // Hide black screen
-        document.getElementById('content').style.display = 'flex'; // Show content
-        document.getElementById('popup').classList.add('show'); // Show popup
-        document.getElementById('bgAudio').play(); // Play audio
-        document.body.style.backgroundColor = 'rgb(61, 155, 238)'; // Restore original background color
-    }
-</script>
-
+    <div class="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>WEB Development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, nesciunt eos? Delectus ipsum quaerat consectetur eos omnis libero sunt doloribus, ipsam nobis nemo sit totam nulla dolor porro voluptas. Id.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-regular fa-image"></i>
+                    <h2>Photo Editing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, nesciunt eos? Delectus ipsum quaerat consectetur eos omnis libero sunt doloribus, ipsam nobis nemo sit totam nulla dolor porro voluptas. Id.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-pied-piper"></i>
+                    <h2>Logo Designing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, nesciunt eos? Delectus ipsum quaerat consectetur eos omnis libero sunt doloribus, ipsam nobis nemo sit totam nulla dolor porro voluptas. Id.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/index.html - Google Chrome 6_22_2024 10_57_08 AM.png" alt="">
+                    <div class="layer">
+                       <!-- <h3>Social Web</h3>
+                        <p>Lorem ips um dolor, sit amet consectetur adipisicing elit. Praesentium animi laboriosam est, temporibus minima cum voluptatem .</p> -->
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/ps.png" alt="">
+                    <div class="layer">
+                        <!-- <h3>Photo Editing</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium animi laboriosam est, temporibus minima cum voluptatem .</p> -->
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/logo.png" alt="">
+                    <div class="layer"></div>
+                        <!-- <h3>Logo Designing</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium animi laboriosam est, temporibus minima cum voluptatem .</p> -->
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 </html>
